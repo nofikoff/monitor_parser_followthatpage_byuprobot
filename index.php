@@ -1,30 +1,49 @@
 <?php
-$fileURL = 'https://kyivobl.tax.gov.ua/data/files/253906.RAR';
-$pageURL = 'https://kyivobl.tax.gov.ua/byudjetni-rahunki/';
+$list_regions = [
+    [
+        'fileURL' => 'https://kyivobl.tax.gov.ua/data/files/253906.RAR',
+        'pageURL' => 'https://kyivobl.tax.gov.ua/byudjetni-rahunki/',
+        'pageRegexp' => '~<strong>1\. <a href="([^"]+)">~',
+    ],
 
-echo "Анализ $pageURL на предмет смены ссылки на файл<br>\n";
+    [
+        'fileURL' => 'https://kyivobl.tax.gov.ua/data/files/253906.RAR',
+        'pageURL' => 'https://kyivobl.tax.gov.ua/byudjetni-rahunki/',
+        'pageRegexp' => '~<strong>1\. <a href="([^"]+)">~',
+    ],
+
+];
+foreach ($list_regions as $list_region) {
+    print_check($list_region);
+    echo "<hr>\n";
+}
+
+function print_check($region)
+{
+    echo "Анализ {$region['pageURL']} на предмет смены ссылки на файл<br>\n";
 
 
-$content = file_get_contents($pageURL);
-if (preg_match('~<strong>1\. <a href="([^"]+)">~', $content, $d)) {
+    $content = file_get_contents($region['pageURL']);
+    if (preg_match($region['pageRegexp'], $content, $d)) {
 
-    if ($d[1] !== '/data/files/253906.RAR') {
-        echo "Ура. Ссылка изменилась новая " . $d[1];
+        // ищем старую ссылку вида /data/files/253906.RAR
+        if ($d[1] !== str_replace('https://kyivobl.tax.gov.ua', '', $region['fileURL'])) {
+            echo "Ура. Ссылка изменилась новая " . $d[1];
+        } else {
+            echo "К сожалению нового файла нет, старый " . $d[1];
+        }
+
     } else {
-        echo "К сожалению нового файла нет, старый " . $d[1];
+        echo "Не могу прочитать страницу";
     }
 
-} else {
-    echo "Не могу прочитать страницу";
-
-}
-
 // Определяем и выводим Last-Modified создания файла
-$headers = get_headers($fileURL, 1);
-$date = "Error";
+    $headers = get_headers($region['fileURL'], 1);
+    $date = "Error";
 //echo "<pre>"; print_r($headers); echo "</pre>";
-if ($headers && (strpos($headers[0], '200') !== FALSE)) {
-    $time = strtotime($headers['Last-Modified']);
-    $date = date("d-m-Y H:i:s", $time);
+    if ($headers && (strpos($headers[0], '200') !== FALSE)) {
+        $time = strtotime($headers['Last-Modified']);
+        $date = date("d-m-Y H:i:s", $time);
+    }
+    echo '<br> ' . $region['fileURL'] . ' last-Modified : ' . $date . '<br>';
 }
-echo '<br>Last-Modified : ' . $date . '<br>';
