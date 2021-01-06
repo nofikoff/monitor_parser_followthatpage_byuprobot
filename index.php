@@ -114,11 +114,11 @@ $list_regions = [
     [
         'pageURL' => 'http://if.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://if.tax.gov.ua/data/material/000/351/446397/Rahunki_vano_Frank_vska_oblast.xls',
-        'fileDate' => '06-01-2021 09:30:2',
+        'fileDate' => '06-01-2021 09:30:22',
     ],
     [
         'pageURL' => 'http://zp.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://zp.tax.gov.ua/data/normativ/000/003/74954/Rahunki_2021_DB_MB_20210104155724781.xls',
+        'fileURL' => 'https://zp.tax.gov.ua/data/normativ/000/003/74954/rahunki_2021_utoch_ok1.xls',
         'fileDate' => '06-01-2021 14:47:17',
     ],
     [
@@ -141,7 +141,7 @@ $list_regions = [
     [
         'pageURL' => 'http://dp.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://dp.tax.gov.ua/data/files/254079.xls',
-        'fileDate' => '06-01-2021 14:38:3',
+        'fileDate' => '06-01-2021 14:38:37',
     ],
     [
         'pageURL' => 'http://vl.tax.gov.ua/byudjetni-rahunki/',
@@ -157,7 +157,7 @@ foreach ($list_regions as $list_region) {
 
 function print_check($region)
 {
-    echo "<a href='{$region['pageURL']}'>{$region['pageURL']}</a> <br>\n";
+    echo "<strong><a href='{$region['pageURL']}'>{$region['pageURL']}</a></strong><br>\n";
     if (!$region['fileURL']) {
         echo "не указан адрес файла<br>\n";
         return;
@@ -171,6 +171,7 @@ function print_check($region)
         // кейс когда второй файл лежит на отдельной хтмл странице
         if (isset($region['pageURL2'])) {
             $content = file_get_contents($region['pageURL2']);
+            echo "<br><strong><a href='{$region['pageURL2']}'>{$region['pageURL2']}</a></strong><br>\n";
         }
         checkOneFile($content, $region['fileURL2'], $region['fileDate2']);
     }
