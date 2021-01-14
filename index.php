@@ -1,4 +1,8 @@
 <h2>Анализ сайтов налоговой в областях на предмет смены ссылки и Last-Modified на файлы реквизитов 2021</h2>
+Не путай дату ЗАРУЗКИ (появления) файла на сайте и дату МОДИФИКАЦИИ файла.
+Скрипт определяет дату модификации файла, а загрузить его на сайт могут на неколько часов позже.
+Дату появления/загрузки файла на сайтах налоговой -
+скрипт не отслеживает.<br><br>
 <?php
 $list_regions = [
     [
@@ -18,8 +22,8 @@ $list_regions = [
 
     [
         'pageURL' => 'http://vin.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://vin.tax.gov.ua/data/material/000/351/446417/DB_2021_na_KIEV_0501.xlsx',
-        'fileDate' => '06-01-2021 12:02:30',
+        'fileURL' => 'https://vin.tax.gov.ua/data/material/000/351/446417/DB_2021_na_KIEV_1401.xlsx',
+        'fileDate' => '14-01-2021 11:28:02',
         'fileURL2' => 'https://vin.tax.gov.ua/data/material/000/351/446417/mb_2021_na_kiev_0501.xlsx',
         'fileDate2' => '06-01-2021 12:03:16',
     ],
@@ -58,7 +62,7 @@ $list_regions = [
     [
         'pageURL' => 'http://kh.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://kh.tax.gov.ua/data/files/254147.xls',
-        'fileDate' => '06-01-2021 14:15:21',
+        'fileDate' => '13-01-2021 16:14:11',
     ],
     [
         'pageURL' => 'http://tr.tax.gov.ua/byudjetni-rahunki/',
@@ -70,7 +74,7 @@ $list_regions = [
     [
         'pageURL' => 'http://sumy.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://sumy.tax.gov.ua/data/files/254115.xlsx',
-        'fileDate' => '06-01-2021 13:54:05',
+        'fileDate' => '13-01-2021 13:55:34',
     ],
     [
         'pageURL' => 'http://rv.tax.gov.ua/byudjetni-rahunki/',
@@ -84,7 +88,7 @@ $list_regions = [
         // Полтава долбоебы
         //'fileURL' => 'https://kh.tax.gov.ua/data/files/254091.xls',
         'fileURL' => 'https://kh.tax.gov.ua/data/files/254091.xls',
-        'fileDate' => '05-01-2021 18:17:04',
+        'fileDate' => '11-01-2021 15:45:13',
     ],
     [
         'pageURL' => 'http://od.tax.gov.ua/byudjetni-rahunki/',
@@ -106,7 +110,7 @@ $list_regions = [
     [
         'pageURL' => 'http://lg.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://lg.tax.gov.ua/data/files/253927.xls',
-        'fileDate' => '12-01-2021 11:31:57',
+        'fileDate' => '14-01-2021 13:59:00',
     ],
     [
         'pageURL' => 'http://kr.tax.gov.ua/byudjetni-rahunki/',
@@ -125,8 +129,8 @@ $list_regions = [
     ],
     [
         'pageURL' => 'http://zak.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://zak.tax.gov.ua/data/files/254059.xlsx',
-        'fileDate' => '06-01-2021 11:58:57',
+        'fileURL' => 'https://zak.tax.gov.ua/data/files/254151.xlsx',
+        'fileDate' => '14-01-2021 09:47:20',
     ],
     [
         'pageURL' => 'http://zt.tax.gov.ua/byudjetni-rahunki/',
@@ -143,7 +147,7 @@ $list_regions = [
     [
         'pageURL' => 'http://dp.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://dp.tax.gov.ua/data/files/254099.xls',
-        'fileDate' => '06-01-2021 14:38:37',
+        'fileDate' => '12-01-2021 14:36:18',
     ],
     [
         'pageURL' => 'http://vl.tax.gov.ua/byudjetni-rahunki/',
@@ -191,10 +195,11 @@ function checkOneFile($content, $file, $fileDate)
     $date = "Error";
     if ($headers && (strpos($headers[0], '200') !== FALSE)) {
         $time = strtotime($headers['Last-Modified']);
+        if ((time()-$time) < 172800) echo "<font color=red>Прошло меньше 2х суток с момента модификации файла<br></font>\n";
         $date = date("d-m-Y H:i:s", $time);
     }
     echo "<br> <a href='{$file}'>{$file}</a> файл изменен : <strong>$date</strong><br>";
     if ($fileDate && $date !== 'Error' && $fileDate !== $date)
-        echo "<font color=red>  !! Дата файла изменилась - старая была {$fileDate}<br></font>\n";
+        echo "<font color=red>  !! Дата модификации файла изменилась - старая была {$fileDate}<br></font>\n";
 
 }
