@@ -57,7 +57,7 @@ $list_regions = [
     ],
     [
         'pageURL' => 'http://kh.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://kh.tax.gov.ua/data/files/254075.xls',
+        'fileURL' => 'https://kh.tax.gov.ua/data/files/254147.xls',
         'fileDate' => '06-01-2021 14:15:21',
     ],
     [
@@ -69,7 +69,7 @@ $list_regions = [
     ],
     [
         'pageURL' => 'http://sumy.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://sumy.tax.gov.ua/data/files/254072.xlsx',
+        'fileURL' => 'https://sumy.tax.gov.ua/data/files/254115.xlsx',
         'fileDate' => '06-01-2021 13:54:05',
     ],
     [
@@ -81,7 +81,9 @@ $list_regions = [
     ],
     [
         'pageURL' => 'http://poltava.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://poltava.tax.gov.ua/data/files/254040.xls',
+        // Полтава долбоебы
+        //'fileURL' => 'https://kh.tax.gov.ua/data/files/254091.xls',
+        'fileURL' => 'https://kh.tax.gov.ua/data/files/254091.xls',
         'fileDate' => '05-01-2021 18:17:04',
     ],
     [
@@ -104,7 +106,7 @@ $list_regions = [
     [
         'pageURL' => 'http://lg.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://lg.tax.gov.ua/data/files/253927.xls',
-        'fileDate' => '06-01-2021 10:57:07',
+        'fileDate' => '12-01-2021 11:31:57',
     ],
     [
         'pageURL' => 'http://kr.tax.gov.ua/byudjetni-rahunki/',
@@ -135,12 +137,12 @@ $list_regions = [
     ],
     [
         'pageURL' => 'http://dn.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://dn.tax.gov.ua/data/material/000/331/414335/rahunki_05.xls',
-        'fileDate' => '06-01-2021 15:23:51',
+        'fileURL' => 'https://dn.tax.gov.ua/data/material/000/331/414335/11_01_2021rahunki_05.xls',
+        'fileDate' => '11-01-2021 15:17:20',
     ],
     [
         'pageURL' => 'http://dp.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://dp.tax.gov.ua/data/files/254079.xls',
+        'fileURL' => 'https://dp.tax.gov.ua/data/files/254099.xls',
         'fileDate' => '06-01-2021 14:38:37',
     ],
     [
@@ -183,7 +185,6 @@ function checkOneFile($content, $file, $fileDate)
         echo "<br><font color=red>  !! эта ссылка теперь отсуствует на странице налоговой' {$file} : </font>\n";
     } else {
         //сылка на файл не изменилась
-        echo "\n";
     }
     // Определяем и выводим Last-Modified создания файла
     $headers = get_headers($file, 1);
