@@ -193,13 +193,16 @@ function checkOneFile($content, $file, $fileDate)
     // Определяем и выводим Last-Modified создания файла
     $headers = get_headers($file, 1);
     $date = "Error";
+    $time = 0;
     if ($headers && (strpos($headers[0], '200') !== FALSE)) {
         $time = strtotime($headers['Last-Modified']);
-        if ((time()-$time) < 172800) echo "<font color=red>Прошло меньше 2х суток с момента модификации файла<br></font>\n";
         $date = date("d-m-Y H:i:s", $time);
     }
     echo "<br> <a href='{$file}'>{$file}</a> файл изменен : <strong>$date</strong><br>";
     if ($fileDate && $date !== 'Error' && $fileDate !== $date)
         echo "<font color=red>  !! Дата модификации файла изменилась - старая была {$fileDate}<br></font>\n";
+
+    if ((time() - $time) < 172800) echo "<font color=red>Прошло меньше 2х суток с момента модификации файла<br></font>\n";
+
 
 }
