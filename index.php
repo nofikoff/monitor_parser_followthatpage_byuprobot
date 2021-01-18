@@ -9,17 +9,17 @@ $list_regions = [
         'name' => 'Киевская область',
         'pageURL' => 'https://kyivobl.tax.gov.ua/okremi-storinki/arhiv2/447490.html',
         'fileURL' => 'https://kyivobl.tax.gov.ua/data/material/000/352/447490/Rahunki_DB_Kievska.xls',
-        'fileDate' => '06-01-2021 14:42:45',
+        'fileDate' => '18-01-2021 08:39:41',
 
         'fileURL2' => 'https://kyivobl.tax.gov.ua/data/material/000/352/447490/Rahunki_MB_Kievska.xlsx',
-        'fileDate2' => '06-01-2021 14:42:45',
+        'fileDate2' => '18-01-2021 08:33:15',
     ],
 
     [
         'name' => 'Киев',
         'pageURL' => 'https://kyiv.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://kyiv.tax.gov.ua/data/files/254174.xls',
-        'fileDate' => '06-01-2021 13:58:14',
+        'fileDate' => '16-01-2021 09:25:59',
     ],
 
     [
@@ -41,7 +41,7 @@ $list_regions = [
         'name' => 'Черновцы',
         'pageURL' => 'https://cv.tax.gov.ua/okremi-storinki/arhiv/446286.html',
         'fileURL' => 'https://cv.tax.gov.ua/data/material/000/351/446286/Dodatok_1_derzh_24.xls',
-        'fileDate' => '06-01-2021 12:13:23',
+        'fileDate' => '18-01-2021 08:09:14',
 
         'pageURL2' => 'https://cv.tax.gov.ua/okremi-storinki/arhiv/446289.html',
         'fileURL2' => 'https://cv.tax.gov.ua/data/material/000/351/446289/Dodatok_2_mists_24.xls',
@@ -51,20 +51,20 @@ $list_regions = [
         'name' => 'Черкассы',
         'pageURL' => 'http://ck.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://ck.tax.gov.ua/data/material/000/010/67220/16012021.xlsx',
-        'fileDate' => '24-12-2020 14:40:36',
+        'fileDate' => '16-01-2021 15:56:11',
     ],
     [
         'name' => 'Хмельницкий',
         'pageURL' => 'http://km.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://km.tax.gov.ua/data/files/254169.xls',
+        'fileURL' => 'https://km.tax.gov.ua/data/files/254202.xls',
         'fileDate' => '05-01-2021 16:56:42',
-        'fileURL2' => 'https://km.tax.gov.ua/data/files/254170.xls',
+        'fileURL2' => 'https://km.tax.gov.ua/data/files/254203.xls',
         'fileDate2' => '05-01-2021 16:56:57',
     ],
     [
         'name' => 'Херсон',
         'pageURL' => 'http://kherson.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://kherson.tax.gov.ua/data/files/254182.xls',
+        'fileURL' => 'https://kherson.tax.gov.ua/data/files/254206.xls',
         'fileDate' => '06-01-2021 14:30:31',
     ],
     [
@@ -77,23 +77,23 @@ $list_regions = [
         'name' => 'Тернополь',
         'pageURL' => 'http://tr.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://tr.tax.gov.ua/data/material/000/351/446350/Ternopil_DB_20210116101207449.xls',
-        'fileDate' => '06-01-2021 10:51:47',
+        'fileDate' => '16-01-2021 10:12:15',
         'fileURL2' => 'https://tr.tax.gov.ua/data/material/000/351/446350/Ternopil_MB_20210116101136227.xls',
-        'fileDate2' => '06-01-2021 10:52:49',
+        'fileDate2' => '16-01-2021 10:11:36',
     ],
     [
         'name' => 'Сумы',
         'pageURL' => 'http://sumy.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://sumy.tax.gov.ua/data/files/254192.xlsx',
+        'fileURL' => 'https://sumy.tax.gov.ua/data/files/254204.xlsx',
         'fileDate' => '13-01-2021 13:55:34',
     ],
     [
         'name' => 'Ровно',
         'pageURL' => 'http://rv.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://rv.tax.gov.ua/data/files/254185.xls',
-        'fileDate' => '06-01-2021 11:03:30',
+        'fileDate' => '16-01-2021 12:00:10',
         'fileURL2' => 'https://rv.tax.gov.ua/data/files/254184.xls',
-        'fileDate2' => '06-01-2021 11:04:15',
+        'fileDate2' => '16-01-2021 11:59:49',
     ],
     [
         'name' => 'Полтава',
@@ -101,7 +101,7 @@ $list_regions = [
         // Полтава долбоебы
         //'fileURL' => 'https://kh.tax.gov.ua/data/files/254091.xls',
         'fileURL' => 'https://kh.tax.gov.ua/data/files/254176.xls',
-        'fileDate' => '11-01-2021 15:45:13',
+        'fileDate' => '16-01-2021 09:55:59',
     ],
     [
         'name' => 'Одесса',
@@ -113,71 +113,71 @@ $list_regions = [
         'name' => 'Николаев',
         'pageURL' => 'http://mk.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://mk.tax.gov.ua/data/files/254177.xls',
-        'fileDate' => '04-01-2021 14:56:13',
+        'fileDate' => '16-01-2021 10:27:47',
         'fileURL2' => 'https://mk.tax.gov.ua/data/files/254189.xls',
-        'fileDate2' => '05-01-2021 10:58:19',
+        'fileDate2' => '16-01-2021 14:41:35',
     ],
     [
         'name' => 'Львов',
         'pageURL' => 'http://lv.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://lv.tax.gov.ua/data/files/254188.xls',
-        'fileDate' => '06-01-2021 08:49:47',
+        'fileDate' => '16-01-2021 14:00:15',
     ],
     [
         'name' => 'Луганск',
         'pageURL' => 'http://lg.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://lg.tax.gov.ua/data/files/253927.xls',
-        'fileDate' => '14-01-2021 13:59:00',
+        'fileDate' => '16-01-2021 10:16:35',
     ],
     [
         'name' => 'Кировоград',
         'pageURL' => 'http://kr.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://kr.tax.gov.ua/data/material/000/281/365160/DB_1601_20210116132149337.zip',
-        'fileDate' => '06-01-2021 13:10:34',
+        'fileDate' => '16-01-2021 13:21:49',
     ],
     [
         'name' => 'Ивано-Франковск',
         'pageURL' => 'http://if.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://if.tax.gov.ua/data/material/000/351/446397/Rahunki_vano_Frank_vska_oblast.xls',
-        'fileDate' => '06-01-2021 09:30:22',
+        'fileDate' => '16-01-2021 16:22:39',
     ],
     [
         'name' => 'Запорожье',
         'pageURL' => 'http://zp.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://zp.tax.gov.ua/data/normativ/000/003/74954/rahunki_2021_utoch_ok1.xls',
+        'fileURL' => 'https://zp.tax.gov.ua/data/normativ/000/003/74954/Rahunki_2021_DB_MB_20210118145927466.xls',
         'fileDate' => '06-01-2021 14:47:17',
     ],
     [
         'name' => 'Закарпатье',
         'pageURL' => 'http://zak.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://zak.tax.gov.ua/data/files/254201.xls',
-        'fileDate' => '14-01-2021 09:47:20',
+        'fileDate' => '16-01-2021 16:01:17',
     ],
     [
         'name' => 'Житомир',
         'pageURL' => 'http://zt.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://zt.tax.gov.ua/data/material/000/353/448809/sayt_DB_2021_2.xls',
+        'fileURL' => 'https://zt.tax.gov.ua/data/material/000/353/448876/sayt_DB_2021_2.xls',
         'fileDate' => '06-01-2021 09:35:04',
-        'fileURL2' => 'https://zt.tax.gov.ua/data/material/000/353/448809/sayt_MB_2021_1.xls',
+        'fileURL2' => 'https://zt.tax.gov.ua/data/material/000/353/448876/sayt_MB_2021_1.xls',
         'fileDate2' => '06-01-2021 09:35:09',
     ],
     [
         'name' => 'Донецк',
         'pageURL' => 'http://dn.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://dn.tax.gov.ua/data/material/000/331/414335/rahunki_05.xls',
+        'fileURL' => 'https://dn.tax.gov.ua/data/material/000/331/414335/18_01_2021rahunki_05.xls',
         'fileDate' => '11-01-2021 15:17:20',
     ],
     [
         'name' => 'Днепр',
         'pageURL' => 'http://dp.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'https://dp.tax.gov.ua/data/files/254181.xls',
-        'fileDate' => '12-01-2021 14:36:18',
+        'fileDate' => '16-01-2021 10:58:07',
     ],
     [
         'name' => 'Волынь',
         'pageURL' => 'http://vl.tax.gov.ua/byudjetni-rahunki/',
         'fileURL' => 'http://vl.tax.gov.ua/data/files/254168.xlsx',
-        'fileDate' => '06-01-2021 08:58:41',
+        'fileDate' => '16-01-2021 08:11:52',
     ],
 
 ];
@@ -232,8 +232,7 @@ function checkOneFile($content, $file, $fileDate)
     if ($fileDate && $date !== 'Error' && $fileDate !== $date) {
         echo "<font color=red>  !! Дата модификации файла изменилась - старая была {$fileDate}<br></font>\n";
         $botAlert = 1;
-    }
-    if ((time() - $time) < 172800) echo "<font color=red>Прошло меньше 2х суток с момента модификации файла<br></font>\n";
+    } else if ((time() - $time) < 172800) echo "<font color=red>Прошло меньше 2х суток с момента модификации файла<br></font>\n";
 
 
 }
