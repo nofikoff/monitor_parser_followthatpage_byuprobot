@@ -9,10 +9,10 @@ $list_regions = [
         'name' => 'Киевская область',
         'pageURL' => 'https://kyivobl.tax.gov.ua/okremi-storinki/arhiv2/447490.html',
         'fileURL' => 'https://kyivobl.tax.gov.ua/data/material/000/352/447490/Rahunki_DB_Kievska.xls',
-        'fileDate' => '18-01-2021 08:39:41',
+        'fileDate' => '20-01-2021 15:44:19',
 
         'fileURL2' => 'https://kyivobl.tax.gov.ua/data/material/000/352/447490/Rahunki_MB_Kievska.xlsx',
-        'fileDate2' => '18-01-2021 08:33:15',
+        'fileDate2' => '20-01-2021 14:14:52',
     ],
 
     [
@@ -90,10 +90,10 @@ $list_regions = [
     [
         'name' => 'Ровно',
         'pageURL' => 'http://rv.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://rv.tax.gov.ua/data/files/254235.xls',
-        'fileDate' => '19-01-2021 15:59:22',
-        'fileURL2' => 'https://rv.tax.gov.ua/data/files/254234.xls',
-        'fileDate2' => '19-01-2021 15:58:54',
+        'fileURL' => 'https://rv.tax.gov.ua/data/files/254242.xls',
+        'fileDate' => '20-01-2021 08:16:50',
+        'fileURL2' => 'https://rv.tax.gov.ua/data/files/254241.xls',
+        'fileDate2' => '20-01-2021 08:16:27',
     ],
     [
         'name' => 'Полтава',
@@ -112,8 +112,8 @@ $list_regions = [
     [
         'name' => 'Николаев',
         'pageURL' => 'http://mk.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://mk.tax.gov.ua/data/files/254177.xls',
-        'fileDate' => '16-01-2021 10:27:47',
+        'fileURL' => 'https://mk.tax.gov.ua/data/files/254259.xls',
+        'fileDate' => '22-01-2021 11:33:24ко',
         'fileURL2' => 'https://mk.tax.gov.ua/data/files/254189.xls',
         'fileDate2' => '16-01-2021 14:41:35',
     ],
@@ -150,8 +150,8 @@ $list_regions = [
     [
         'name' => 'Закарпатье',
         'pageURL' => 'http://zak.tax.gov.ua/byudjetni-rahunki/',
-        'fileURL' => 'https://zak.tax.gov.ua/data/files/254201.xls',
-        'fileDate' => '16-01-2021 16:01:17',
+        'fileURL' => 'https://zak.tax.gov.ua/data/files/254254.xlsx',
+        'fileDate' => '22-01-2021 08:38:09',
     ],
     [
         'name' => 'Житомир',
