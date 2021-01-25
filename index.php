@@ -219,7 +219,7 @@ function checkOneFile($content, $file, $fileDate)
     global $botAlert;
 
     if (!strpos($content, parse_url($file)['path'])) {
-        echo "<br><font color=red>  !! эта ссылка теперь отсутствует на странице налоговой' {$file} : </font>\n";
+        echo "<br><span style='color: red'>  !! эта ссылка теперь отсутствует на странице налоговой' {$file} : </span>\n";
         $botAlert = 1;
     }
     // Определяем и выводим Last-Modified создания файла
@@ -232,10 +232,10 @@ function checkOneFile($content, $file, $fileDate)
     }
     echo "<br> <a href='{$file}'>{$file}</a> файл изменен : <strong>$date</strong><br>";
     if ($fileDate && $date !== 'Error' && $fileDate !== $date) {
-        echo "<font color=red>  !! Дата модификации файла изменилась - старая была {$fileDate}<br></font>\n";
+        echo "<span style='color: red'>  !! Дата модификации файла изменилась - старая была {$fileDate}<br></span>\n";
         $botAlert = 1;
     } else if ((time() - $time) < 172800) {
-        echo "<font color=green>Прошло меньше 2х суток с момента модификации файла<br></font>\n";
+        echo "<span style='color: green'>Прошло меньше 2х суток с момента модификации файла<br></span>\n";
     }
 
 
