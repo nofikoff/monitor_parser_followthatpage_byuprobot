@@ -98,7 +98,7 @@ $list_regions = [
     [
         'name' => 'Полтава',
         'pageURL' => 'http://poltava.tax.gov.ua/byudjetni-rahunki/',
-        // Полтава долбоебы
+        // Полтава постоянно ошибаются в доменном имени - берут соседский kh.tax.gov.ua
         //'fileURL' => 'https://kh.tax.gov.ua/data/files/254091.xls',
         'fileURL' => 'https://kh.tax.gov.ua/data/files/254236.xls',
         'fileDate' => '19-01-2021 16:12:27',
@@ -186,8 +186,8 @@ foreach ($list_regions as $list_region) {
     print_check($list_region);
     echo "<hr>\n";
 }
+// ключевое слово для алерта через сервис uptimerobot.com (1 раз в час проверяет этот скрипт)
 if ($botAlert) echo "<br>uptimerobot.com ALERT";
-echo "<br><br><br><br><br><br><br><br><br><br>";
 
 
 function print_check($region)
