@@ -1,6 +1,6 @@
 <h2>Анализ сайтов налоговой в областях на предмет смены ссылки и Last-Modified на файлы реквизитов 2021</h2>
 Не путай дату ЗАГРУЗКИ (появления) файла на сайте и дату МОДИФИКАЦИИ файла.
-Скрипт определяет дату модификации файла, а загрузить его на сайт могут на неколько часов позже.
+Скрипт определяет дату модификации файла, а загрузить его на сайт могут на несколько часов позже.
 Дату появления/загрузки файла на сайтах налоговой -
 скрипт не отслеживает.<br>За этой страницей следит и шлет алерты в телеграм внешний сервис uptimerobot.com<br><br>
 <?php
@@ -187,7 +187,9 @@ foreach ($list_regions as $list_region) {
     echo "<hr>\n";
 }
 // ключевое слово для алерта через сервис uptimerobot.com (1 раз в час проверяет этот скрипт)
-if ($botAlert) echo "<br>uptimerobot.com ALERT";
+if ($botAlert) {
+    echo "<br>uptimerobot.com ALERT";
+}
 
 
 function print_check($region)
@@ -201,7 +203,7 @@ function print_check($region)
     $content = file_get_contents($region['pageURL']);
     checkOneFile($content, $region['fileURL'], $region['fileDate']);
 
-    // у неокторых два файла надо чекать
+    // у некоторых два файла надо чекать
     if (!empty($region['fileURL2'])) {
         // кейс когда второй файл лежит на отдельной хтмл странице
         if (isset($region['pageURL2'])) {
@@ -217,7 +219,7 @@ function checkOneFile($content, $file, $fileDate)
     global $botAlert;
 
     if (!strpos($content, parse_url($file)['path'])) {
-        echo "<br><font color=red>  !! эта ссылка теперь отсуствует на странице налоговой' {$file} : </font>\n";
+        echo "<br><font color=red>  !! эта ссылка теперь отсутствует на странице налоговой' {$file} : </font>\n";
         $botAlert = 1;
     }
     // Определяем и выводим Last-Modified создания файла
@@ -232,7 +234,9 @@ function checkOneFile($content, $file, $fileDate)
     if ($fileDate && $date !== 'Error' && $fileDate !== $date) {
         echo "<font color=red>  !! Дата модификации файла изменилась - старая была {$fileDate}<br></font>\n";
         $botAlert = 1;
-    } else if ((time() - $time) < 172800) echo "<font color=green>Прошло меньше 2х суток с момента модификации файла<br></font>\n";
+    } else if ((time() - $time) < 172800) {
+        echo "<font color=green>Прошло меньше 2х суток с момента модификации файла<br></font>\n";
+    }
 
 
 }
